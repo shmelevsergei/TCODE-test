@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:17
+    container_name: db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 5439:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  nestjs:
+    build: .
+    container_name: nestjs
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run start
+
+volumes:
+  pgdata:

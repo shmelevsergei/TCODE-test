@@ -25,6 +25,7 @@
 
 Перед запуском необходимо создать файл `.env` в папке `backend` и добавить туда следующие переменные:
 
+```sh
 POSTGRES_USER='postgers'
 POSTGRES_PASSWORD='postgers'
 POSTGRES_DB='blog_db'
@@ -32,6 +33,7 @@ POSTGRES_HOST='0.0.0.0'
 
 PORT=8000
 JWT_SECRET="quqeiq;jqodjnqo;jndqondoq"
+```
 
 ### 2. Запуск фронтенда (React + TypeScript)
 
@@ -52,7 +54,7 @@ JWT_SECRET="quqeiq;jqodjnqo;jndqondoq"
 ## Дополнительная информация
 
 -   **Бэкенд API** будет работать на: <http://localhost:8000>
--   **Фронтенд по умолчанию** запускается на порту 5173
+-   **Фронтенд по умолчанию** запускается на порту `5173`
 -   **База данных** разворачивается в Docker-контейнере
 
 ## ⚠ Внимание
